@@ -1,0 +1,124 @@
+/* Initials //////////////////////////////////////// */
+
+@import url("./palette.css");
+
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600&family=Open+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap");
+
+@font-face {
+  font-family: "Opicio";
+  src: url("/assets/fonts/Opificio.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.755vw;
+  color: var(--black);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Navigation //////////////////////////////////////// */
+
+nav {
+  width: 100%;
+  height: 10rem;
+  position: fixed;
+
+  background-color: var(--white);
+
+  display: flex;
+  align-items: center;
+  padding: 0 10rem;
+}
+
+nav #logo {
+  width: 8rem;
+  height: 8rem;
+  object-fit: cover;
+  margin-right: 1.5rem;
+}
+
+nav h1 {
+  font-size: 3rem;
+  font-family: "Opicio";
+  color: var(--blue);
+}
+
+nav ul {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  font-family: "Kanit", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+nav ul a {
+  transition: color var(--fast), font-size var(--fast);
+}
+
+nav ul a:hover {
+  font-size: 2.4rem;
+  color: var(--primary);
+}
+
+#highlight {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 0.25rem 1rem;
+  border-radius: 1rem;
+  transition: background-color var(--fast), font-size var(--fast);
+}
+
+#highlight:hover {
+  color: var(--primary);
+  background-color: var(--secondary);
+  font-size: 2.1rem;
+}
+
+nav ul li:not(:last-of-type) {
+  margin-right: 1.5rem;
+}
+
+/* Header //////////////////////////////////////// */
+
+header {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../temporary/header.jpg");
+  background-position: center;
+  background-size: cover;
+
+  display: flex;
+  align-items: flex-start;
+  padding: 20rem 10rem 0 10rem;
+}
+
+header #header-content {
+  color: var(--white);
+  margin-top: 5rem;
+}
+
+header h2 {
+  font-size: 4rem;
+  font-weight: 500;
+  margin-bottom: 5rem;
+}
+
+header p {
+  font-size: 2rem;
+  width: 50%;
+}
