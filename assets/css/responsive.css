@@ -1,0 +1,70 @@
+@media (max-aspect-ratio: 1/1) {
+  /* Navigation //////////////////////////////////////// */
+
+  #responsive nav {
+    height: 30rem;
+    padding: 0 10rem;
+  }
+
+  #responsive .smallNav {
+    height: 20rem;
+    border-bottom-width: 1rem;
+    padding: 0 5rem;
+  }
+
+  #responsive nav #logo {
+    width: 25rem;
+    height: 25rem;
+    margin-right: 3rem;
+  }
+
+  #responsive nav #logo.smallLogo {
+    width: 15rem;
+    height: 15rem;
+  }
+
+  #responsive nav h1 {
+    font-size: 7.5rem;
+  }
+
+  #responsive nav ul {
+    position: absolute;
+    background-color: var(--white);
+    top: 100%;
+    left: 0;
+    flex-direction: column;
+    font-size: 10rem;
+    padding: 10rem;
+    width: 100vw;
+    height: auto;
+    overflow-y: hidden;
+  }
+
+  #responsive #menu {
+    display: inline-block;
+    margin-left: auto;
+  }
+
+  #responsive nav #nav-highlight {
+    background-color: initial;
+    color: var(--primary);
+  }
+
+  #responsive nav #nav-highlight:hover {
+    color: var(--secondary);
+  }
+
+  #responsive nav ul li:not(:last-of-type) {
+    margin-right: 0;
+    margin-bottom: 5rem;
+  }
+}
+
+#fade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--fade);
+}
