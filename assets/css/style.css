@@ -89,6 +89,7 @@ footer ul {
   font-family: "Kanit", sans-serif;
   font-size: 2rem;
   font-weight: 600;
+  transition: left var(--fast);
 }
 
 nav ul a,

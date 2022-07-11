@@ -36,8 +36,12 @@
     font-size: 10rem;
     padding: 10rem;
     width: 100vw;
-    height: auto;
+    height: 100vh;
     overflow-y: hidden;
+  }
+
+  #responsive nav ul.hidden {
+    left: 100vw;
   }
 
   #responsive #menu {
@@ -58,13 +62,9 @@
     margin-right: 0;
     margin-bottom: 5rem;
   }
-}
 
-#fade {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: var(--fade);
+  #responsive nav ul a:hover {
+    font-size: unset;
+    color: var(--primary);
+  }
 }
