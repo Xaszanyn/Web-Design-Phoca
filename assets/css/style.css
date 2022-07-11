@@ -293,3 +293,8 @@ footer .footer-contact a:hover {
 footer p {
   text-align: center;
 }
+
+#menu {
+  /* VERSION CONTROL */
+  background-color: purple;
+}

@@ -30,3 +30,5 @@ function scrollCheck() {
     logo.classList.add("smallLogo");
   }
 }
+
+alert("version control");
