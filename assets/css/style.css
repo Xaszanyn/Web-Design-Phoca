@@ -16,8 +16,13 @@
 }
 
 html {
-  font-family: "Open Sans", sans-serif;
   font-size: 0.755vw;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--white);
   color: var(--black);
 }
 
@@ -36,12 +41,17 @@ nav {
   width: 100%;
   height: 10rem;
   position: fixed;
-
   background-color: var(--white);
-
   display: flex;
   align-items: center;
   padding: 0 10rem;
+  border-bottom: 0px solid var(--secondary);
+  transition: height var(--fast), border-bottom-width var(--fast);
+}
+
+.smallNav {
+  height: 6rem;
+  border-bottom-width: 0.25rem;
 }
 
 nav #logo {
@@ -49,6 +59,12 @@ nav #logo {
   height: 8rem;
   object-fit: cover;
   margin-right: 1.5rem;
+  transition: width var(--fast), height var(--fast);
+}
+
+nav #logo.smallLogo {
+  width: 5rem;
+  height: 5rem;
 }
 
 nav h1 {
@@ -67,7 +83,8 @@ nav ul {
 }
 
 nav ul a {
-  transition: color var(--fast), font-size var(--fast);
+  transition: color var(--fast), font-size var(--fast),
+    background-color var(--fast);
 }
 
 nav ul a:hover {
@@ -75,15 +92,14 @@ nav ul a:hover {
   color: var(--primary);
 }
 
-#highlight {
+nav #nav-highlight {
   background-color: var(--primary);
   color: var(--white);
   padding: 0.25rem 1rem;
   border-radius: 1rem;
-  transition: background-color var(--fast), font-size var(--fast);
 }
 
-#highlight:hover {
+nav #nav-highlight:hover {
   color: var(--primary);
   background-color: var(--secondary);
   font-size: 2.1rem;
@@ -101,7 +117,6 @@ header {
   background-image: url("../temporary/header.jpg");
   background-position: center;
   background-size: cover;
-
   display: flex;
   align-items: flex-start;
   padding: 20rem 10rem 0 10rem;
@@ -121,4 +136,48 @@ header h2 {
 header p {
   font-size: 2rem;
   width: 50%;
+  margin-bottom: 2.5rem;
 }
+
+header #header-highlight {
+  font-size: 2rem;
+  background-color: var(--white);
+  color: var(--primary);
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+  padding: 0.25rem 1rem;
+  border-radius: 1rem;
+  transition: color var(--fast), background-color var(--fast),
+    font-size var(--fast);
+}
+
+header #header-highlight:hover {
+  color: var(--secondary);
+  background-color: var(--primary);
+  font-size: 2.1rem;
+}
+
+/* Section //////////////////////////////////////// */
+
+section {
+  font-size: 2rem;
+  padding: 15rem 10rem 0;
+}
+
+section .dual-content {
+  display: grid;
+  grid-template-columns: calc(50% - 5rem) calc(50% - 5rem);
+  column-gap: 10rem;
+}
+
+section .dual-content img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+section h3 {
+  font-size: 4rem;
+  margin-bottom: 3rem;
+}
+
+/* FINISHED 2 SECTIONS, ID ANCHOR LINK LEFT */
