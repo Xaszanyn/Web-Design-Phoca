@@ -2,8 +2,8 @@
   --primary: #54d2c3;
   --secondary: #102825;
   --white: #fff;
-  --black: #080909;
-  --dark: #231f20;
+  --black: #000;
+  --faded: #7f7f7f;
 
   --fast: 0.3s;
 }
