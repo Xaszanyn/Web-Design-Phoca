@@ -2,9 +2,9 @@
 
 /* Initials //////////////////////////////////////// */
 
-@import url("./palette.css");
-@import url("./responsive.css");
-@import url("./patch.css");
+@import url("./palette.css?version=0.9");
+@import url("./responsive.css?version=0.9");
+@import url("./patch.css?version=0.9");
 
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600&family=Open+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap");
 
@@ -128,6 +128,11 @@ footer ul li:not(:last-of-type) {
 #menu {
   display: none;
   font-size: 7.5rem;
+  transition: color var(--fast);
+}
+
+#menu:hover {
+  color: var(--primary);
 }
 
 /* Header //////////////////////////////////////// */
@@ -292,9 +297,4 @@ footer .footer-contact a:hover {
 
 footer p {
   text-align: center;
-}
-
-#menu {
-  /* VERSION CONTROL */
-  background-color: purple;
 }
