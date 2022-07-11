@@ -6,7 +6,7 @@
     padding: 0 10rem;
   }
 
-  #responsive .smallNav {
+  #responsive nav.smallNav {
     height: 20rem;
     border-bottom-width: 1rem;
     padding: 0 5rem;
@@ -38,6 +38,7 @@
     width: 100vw;
     height: 100vh;
     overflow-y: hidden;
+    border-top: 1rem solid var(--secondary);
   }
 
   #responsive nav ul.hidden {
@@ -52,6 +53,7 @@
   #responsive nav #nav-highlight {
     background-color: initial;
     color: var(--primary);
+    padding: 0;
   }
 
   #responsive nav #nav-highlight:hover {
@@ -67,4 +69,127 @@
     font-size: unset;
     color: var(--primary);
   }
+
+  /* Header //////////////////////////////////////// */
+
+  #responsive header {
+    padding-top: 30rem;
+  }
+
+  #responsive header #header-content {
+    margin-top: 20rem;
+  }
+
+  #responsive header h2 {
+    font-size: 12rem;
+    font-weight: 500;
+    margin-bottom: 15rem;
+  }
+
+  #responsive header p {
+    font-size: 6rem;
+    width: 100%;
+    margin-bottom: 15rem;
+  }
+
+  #responsive header #header-highlight {
+    font-size: 7.5rem;
+    font-weight: 500;
+    padding: 1rem 5rem;
+    border-radius: 5rem;
+  }
+
+  /* Section //////////////////////////////////////// */
+
+  #responsive section {
+    font-size: 6rem;
+    padding: 50rem 5rem 0;
+  }
+
+  #responsive section > *:not(:last-of-type) {
+    margin-bottom: 15rem;
+  }
+
+  #responsive section:last-of-type {
+    padding-bottom: 30rem;
+  }
+
+  #responsive section .dual-content {
+    display: grid;
+    grid-template-columns: calc(100%);
+    column-gap: 0;
+    row-gap: 15rem;
+  }
+
+  #responsive section h3 {
+    font-size: 12rem;
+    font-weight: 300;
+    margin-bottom: 5rem;
+  }
+
+  #responsive section .contact {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  #responsive section .contact > a {
+    margin: 15rem;
+  }
+
+  #responsive section .contact i {
+    font-size: 30rem;
+  }
+
+  #responsive section .contact > a:hover i {
+    font-size: 30rem;
+  }
+
+  #responsive section .contact span {
+    font-size: 6rem;
+  }
+
+  #responsive section .contact > a:hover span {
+    font-size: 6rem;
+  }
+
+  /* Footer //////////////////////////////////////// */
+
+  #responsive footer {
+    padding: 15rem 5rem 30rem;
+    font-size: 3rem;
+  }
+
+  #responsive footer #footer-logo {
+    width: 30rem;
+    height: 30rem;
+  }
+
+  #responsive footer .footer-contact {
+    display: none;
+  }
+
+  #responsive footer ul {
+    font-size: 3.5rem;
+  }
+
+  #responsive footer ul a:hover {
+    font-size: unset;
+  }
+
+  #responsive footer #footer-highlight {
+    background-color: initial;
+    color: var(--primary);
+    padding: 0;
+  }
+
+  #responsive footer #footer-highlight:hover {
+    color: var(--white);
+  }
+
+  #responsive footer ul li:not(:last-of-type) {
+    margin-right: 2.5rem;
+  }
 }
+
+/* UNSETLERİ CHECKLE */

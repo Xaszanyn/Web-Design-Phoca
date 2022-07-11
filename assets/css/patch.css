@@ -1,0 +1,17 @@
+#patch-3 {
+  text-align: center;
+}
+
+@media (max-aspect-ratio: 1/1) {
+  #patch-1 {
+    order: 2;
+  }
+
+  #patch-2 {
+    order: 1;
+  }
+
+  #patch-3 {
+    text-align: left;
+  }
+}
