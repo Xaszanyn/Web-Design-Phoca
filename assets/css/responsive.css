@@ -127,6 +127,11 @@
     margin-bottom: 5rem;
   }
 
+  #responsive section .dual-content .collage {
+    grid-template-columns: calc(50% - 2.5rem) calc(50% - 2.5rem);
+    gap: 5rem;
+  }
+
   #responsive section .contact {
     flex-direction: column;
     align-items: center;
