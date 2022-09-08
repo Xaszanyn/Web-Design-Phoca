@@ -2,7 +2,7 @@
   /* Navigation //////////////////////////////////////// */
 
   #responsive nav {
-    height: 30rem;
+    height: 25rem;
     padding: 0 10rem;
   }
 
@@ -73,7 +73,7 @@
   /* Header //////////////////////////////////////// */
 
   #responsive header {
-    padding-top: 30rem;
+    padding-top: 25rem;
   }
 
   #responsive header #header-content {
