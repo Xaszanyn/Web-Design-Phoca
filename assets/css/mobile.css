@@ -1,0 +1,267 @@
+/* ================================================== Main ================================================== */
+
+@font-face {
+  font-family: Cocogoose;
+  src: url("../ttf/Cocogoose.ttf");
+}
+
+#mobile {
+  overflow-x: hidden;
+
+  background-color: var(--background-primary);
+  transition: background var(--super-fast);
+
+  font-family: Cocogoose, sans-serif;
+  font-size: 4vw;
+  color: var(--white);
+}
+
+#mobile > header,
+#mobile > section,
+#mobile > footer {
+  padding: 10vw;
+}
+
+#mobile h2 {
+  font-size: 8vw;
+  margin-bottom: 10vw;
+}
+
+/* ================================================== Navigation & Menu ================================================== */
+
+#mobile nav {
+  z-index: 100;
+  height: 0;
+  position: fixed;
+  width: 100vw;
+  background-color: var(--secondary);
+  border-bottom: 0 solid var(--white);
+  transition: background-color var(--fast), height var(--fast),
+    border-bottom var(--fast);
+}
+
+#mobile nav #navigation {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 15vw;
+  padding-right: 5vw;
+}
+
+#mobile nav #navigation img {
+  height: 10vw;
+}
+
+#mobile nav #navigation h1 {
+  font-size: 4vw;
+  font-weight: lighter;
+  letter-spacing: 0.2vw;
+}
+
+#mobile nav #navigation #bar {
+  font-size: 5vw;
+  margin-left: auto;
+}
+
+#mobile #menu {
+  position: fixed;
+  top: 0;
+  right: 100vw;
+  z-index: 200;
+  width: 100vw;
+  height: 100vh;
+  padding: 15vw 0 15vw !important;
+  background-color: var(--transparent);
+  transition: right var(--fast);
+}
+
+#mobile #menu ul {
+  width: 85vw;
+  border-top-right-radius: 5vw;
+  border-bottom-right-radius: 5vw;
+  height: calc(100vh - 30vw);
+  background-color: var(--white);
+  color: var(--black);
+  font-size: 5vw;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+#mobile #menu ul li {
+  border-bottom: 1vw solid var(--secondary);
+}
+
+#mobile #menu ul li a {
+  display: block;
+  padding: 2.5vw;
+}
+
+/* ================================================== Header ================================================== */
+
+#mobile header {
+  background-image: var(--mobile-background-image);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  padding-top: 70vw;
+}
+
+#mobile header p {
+  margin-bottom: 30vw;
+}
+
+/* ================================================== About Us ================================================== */
+
+#mobile #about-us {
+  margin-top: -10vw;
+}
+
+#mobile #about-us p:first-of-type {
+  margin-bottom: 10vw;
+}
+
+#mobile #about-us p:last-of-type {
+  margin-bottom: 20vw;
+}
+
+/* ================================================== Our Hits ================================================== */
+
+#mobile #out-hits {
+  padding: 10vw 5vw 10vw !important;
+}
+
+#mobile #out-hits h2 {
+  text-align: center;
+}
+
+#mobile #our-hits-grid {
+  display: grid;
+  column-gap: 0;
+  row-gap: 2.5vw;
+  grid-template-columns: 50% 50%;
+  margin-bottom: 10vw;
+}
+
+#mobile .game-icon img {
+  margin-top: -5vw;
+  scale: 1.1;
+  margin-bottom: 2.5vw;
+}
+
+#mobile .game-icon p:first-of-type {
+  text-transform: uppercase;
+  font-size: 3vw;
+  margin-top: -2.5vw;
+  margin-bottom: 1vw;
+}
+
+#mobile .game-icon p:last-of-type {
+  text-transform: uppercase;
+  font-size: 2vw;
+}
+
+#mobile .game-icon p .age {
+  border: 2px solid var(--white);
+  border-radius: 4px;
+  margin-left: 1vw;
+  padding: 0.25vw;
+}
+
+#mobile #octopus {
+  transform: scale(1.35);
+  margin-bottom: 50vw;
+}
+
+/* ================================================== Games ================================================== */
+
+#mobile #games {
+  padding: 10vw 2.5vw !important;
+}
+
+#mobile #games h2 {
+  padding-left: 7.5vw;
+}
+
+#mobile #games-grid {
+  display: grid;
+  column-gap: 0;
+  row-gap: 0;
+  grid-template-columns: 50% 50%;
+}
+
+#mobile #games-grid img {
+  transform: scale(1.1);
+}
+
+/* ================================================== Contact ================================================== */
+
+#mobile #contact-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30vw;
+}
+
+#mobile #contact-flex i {
+  margin: 5vw;
+}
+
+/* ================================================== Footer ================================================== */
+
+#mobile footer {
+  background-color: var(--black);
+  position: relative;
+  padding: 5vw !important;
+  height: 50vw;
+}
+
+#mobile footer h2 {
+  text-align: right;
+  font-size: 5vw !important;
+}
+
+#mobile #arrow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30vw;
+  width: 50vw;
+}
+
+#mobile footer a {
+  position: absolute;
+  top: 15vw;
+  right: 20vw;
+  font-size: 15vw;
+}
+
+#mobile footer p {
+  font-size: 2.5vw;
+  text-align: center;
+  margin-top: 30vw;
+}
+
+/* ================================================== Extra ================================================== */
+
+#mobile #fish,
+#mobile #sea-turtle,
+#mobile #octopus {
+  transition: transform var(--super-fast);
+}
+
+#mobile .number {
+  display: inline;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 110%;
+}
+
+#mobile .opened {
+  height: 15vw;
+  border-bottom: 1vw solid var(--white);
+}
+
+#mobile .displayed {
+  right: 0 !important;
+}

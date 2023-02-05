@@ -1,0 +1,21 @@
+:root {
+  --white: #fff;
+  --black: #000;
+  --transparent: #1f1f1f75;
+  --fade: rgba(0, 0, 0, 0.5);
+  --faded: #7f7f7f;
+
+  --secondary: #453584;
+
+  --background-primary: rgb(45, 102, 115);
+
+  --slow: 1s;
+  --fast: 0.5s;
+  --super-fast: 0.1s linear;
+
+  --mobile-background-image: url("../img/Mobile/Background.png");
+  --desktop-background-image: url("../img/Desktop/Background.png");
+
+  --desktop-primary: #54d2c3;
+  --desktop-secondary: #102825;
+}

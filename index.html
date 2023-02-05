@@ -1,153 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Created by Ekin Aslan ekinaslan.js@gmail.com -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="./assets/css/style.css?version=0.92" />
+    <title>Phoca.io</title>
 
-    <script
-      src="https://kit.fontawesome.com/3b47d68fb0.js"
-      crossorigin="anonymous"
-    ></script>
-
-    <title>phoca.io</title>
+    <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
-  <body id="responsive">
-    <nav>
-      <a href="/"
-        ><img id="logo" src="/assets/img/logos/Logo.png" alt="Logo"
-      /></a>
-      <a href="/"><h1>phoca.io</h1></a>
-      <ul class="hidden">
-        <li><a id="homeButton" href="#">Home</a></li>
-        <li><a id="aboutUsButton" href="#about-us">About Us</a></li>
-        <li><a id="gamesButton" href="#games">Games</a></li>
-        <li><a id="contactButton" href="#contact">Contact</a></li>
-        <li><a href="#" id="nav-highlight">Share Your Game</a></li>
-      </ul>
-      <i id="menu" class="fa-solid fa-bars"></i>
-    </nav>
-    <header>
-      <div class="frame">
-        <div id="header-content">
-          <h2>Hypercasual Gaming</h2>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere
-            officiis eligendi incidunt fugiat soluta, tempore blanditiis natus
-            laborum laboriosam nisi!
-          </p>
-          <a id="header-highlight" href="#">Apply Now!</a>
-        </div>
-      </div>
-    </header>
-    <section id="about-us">
-      <div class="dual-content">
-        <div>
-          <h3>About Us</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto aut
-            earum nihil recusandae cum! Fuga consequuntur dolorum, reiciendis
-            dolor corporis in quia facilis praesentium placeat aut expedita
-            error. Eveniet voluptatum ullam dolores nisi fugit similique sunt
-            voluptatibus obcaecati reiciendis quae velit, nobis, omnis
-            architecto facere excepturi. Cum error quo voluptate.
-          </p>
-        </div>
-        <div id="patch-5" class="slider">
-          <div class="collage sliderFirst">
-            <img id="patch-4" src="./assets/img/games/1.png" alt="Game" />
-            <img src="./assets/img/games/2.png" alt="Game" />
-            <img src="./assets/img/games/3.png" alt="Game" />
-            <img src="./assets/img/games/4.png" alt="Game" />
-          </div>
-          <div class="collage sliderSecond faded right">
-            <img id="patch-6" src="./assets/img/games/5.png" alt="Game" />
-            <img src="./assets/img/games/6.png" alt="Game" />
-            <img src="./assets/img/games/7.png" alt="Game" />
-            <img src="./assets/img/games/8.png" alt="Game" />
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="games">
-      <div class="dual-content">
-        <div id="patch-1">
-          <img
-            style="width: 100%; height: auto"
-            src="./assets/temporary/1.png"
-            alt="Mock"
-          />
-        </div>
-        <div id="patch-2">
-          <h3>Games</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto aut
-            earum nihil recusandae cum! Fuga consequuntur dolorum, reiciendis
-            dolor corporis in quia facilis praesentium placeat aut expedita
-            error. Eveniet voluptatum ullam dolores nisi fugit similique sunt
-            voluptatibus obcaecati reiciendis quae velit, nobis, omnis
-            architecto facere excepturi. Cum error quo voluptate.
-          </p>
-        </div>
-      </div>
-    </section>
-    <section id="contact">
-      <h3 id="patch-3">Contact</h3>
-      <div class="contact">
-        <a href="#">
-          <i class="fa-solid fa-envelope"></i>
-          <span>example@phoca.io</span>
-        </a>
-        <a href="#">
-          <i class="fa-brands fa-app-store"></i>
-          <span>phoca.io</span>
-        </a>
-        <a href="#">
-          <i class="fa-brands fa-linkedin"></i>
-          <span>/phoca.io</span>
-        </a>
-        <a href="#">
-          <i class="fa-brands fa-instagram"></i>
-          <span>@phoca.io</span>
-        </a>
-      </div>
-    </section>
-
-    <footer>
-      <div id="footer">
-        <img
-          id="footer-logo"
-          src="./assets/img/logos/Logo III.png"
-          alt="Logo"
-        />
-        <div class="footer-contact">
-          <a href="#">
-            <i class="fa-solid fa-envelope"></i>
-          </a>
-          <a href="#">
-            <i class="fa-brands fa-app-store"></i>
-          </a>
-          <a href="#">
-            <i class="fa-brands fa-linkedin"></i>
-          </a>
-          <a href="#">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-        </div>
+  <body>
+    <main
+      id="mobile"
+      style="background-repeat: no-repeat; background-size: contain"
+    >
+      <nav>
+        <section id="navigation">
+          <img src="./assets/img/Mobile/Logo.png" />
+          <h1>phoca.io</h1>
+          <a id="bar" href="#"><i class="fa-solid fa-bars"></i></a>
+        </section>
+      </nav>
+      <section id="menu">
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#about-us">About Us</a></li>
+          <li><a href="#our-hits">Our Hits</a></li>
           <li><a href="#games">Games</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="#" id="footer-highlight">Share Your Game</a></li>
+          <li><a href="#">Share Your Game</a></li>
         </ul>
-      </div>
-      <p>© 2022 Phoca Games, All Rights Reserved.</p>
-    </footer>
+      </section>
+      <header>
+        <h2>Hypercasual Gaming</h2>
+        <p>
+          We are committed to producing massively scaling global games while
+          building a future-proof ecosystem in the gaming industry.
+        </p>
+        <img src="assets/img/Mobile/Fish.png" id="fish" />
+      </header>
+      <section id="about-us">
+        <h2>About Us</h2>
+        <p>Welcome to Phoca.io!</p>
+        <p>
+          We develop and publish hyper-casual games for anyone who loves to be
+          entertained. We’re global game makers with big ambitions and a
+          collaborative mindset. We work in small teams to inspire creativity
+          and use data for speedy decision-making. Creating video games is
+          supposed to be fun, so we make sure it’s exactly that.
+        </p>
+        <img src="assets/img/Mobile/Sea Turtle.png" id="sea-turtle" />
+      </section>
+      <section id="our-hits">
+        <h2>#Our Hits</h2>
+        <div id="our-hits-grid">
+          <div class="game-image">
+            <img src="./assets/img/Our Hits/1 First.png" alt="" />
+            <img src="./assets/img/Our Hits/1 Second.png" alt="" />
+          </div>
+          <div class="game-icon">
+            <img src="./assets/img/Our Hits/1 Logo.png" alt="" />
+            <p>Tap On Time<span class="age">4+</span></p>
+            <p>Test your reflexes!</p>
+          </div>
+          <div class="game-icon">
+            <img src="./assets/img/Our Hits/2 Logo.png" alt="" />
+            <p>Make Her Jealous<span class="age">12+</span></p>
+            <p>Take risk, enjoy</p>
+          </div>
+          <div class="game-image">
+            <img src="./assets/img/Our Hits/2 First.png" alt="" />
+            <img src="./assets/img/Our Hits/2 Second.png" alt="" />
+          </div>
+          <div class="game-image">
+            <img src="./assets/img/Our Hits/3 First.png" alt="" />
+            <img src="./assets/img/Our Hits/3 Second.png" alt="" />
+          </div>
+          <div class="game-icon">
+            <img src="./assets/img/Our Hits/3 Logo.png" alt="" />
+            <p>
+              Word Guess <span class="number">3</span>D!<span class="age"
+                >4+</span
+              >
+            </p>
+            <p>Word guessing game</p>
+          </div>
+        </div>
+        <img src="./assets/img/Mobile/Octopus.png" id="octopus" />
+      </section>
+      <section id="games">
+        <h2>Games</h2>
+        <div id="games-grid">
+          <img src="./assets/img/Our Games/Logo 1.png" />
+          <img src="./assets/img/Our Games/Logo 2.png" />
+          <img src="./assets/img/Our Games/Logo 3.png" />
+          <img src="./assets/img/Our Games/Logo 4.png" />
+          <img src="./assets/img/Our Games/Logo 5.png" />
+          <img src="./assets/img/Our Games/Logo 6.png" />
+          <img src="./assets/img/Our Games/Logo 7.png" />
+          <img src="./assets/img/Our Games/Logo 8.png" />
+          <img src="./assets/img/Our Games/Logo 9.png" />
+          <img src="./assets/img/Our Games/Logo 10.png" />
+          <img src="./assets/img/Our Games/Logo 11.png" />
+          <img src="./assets/img/Our Games/Logo 12.png" />
+          <img src="./assets/img/Our Games/Logo 13.png" />
+          <img src="./assets/img/Our Games/Logo 14.png" />
+          <img src="./assets/img/Our Games/Logo 15.png" />
+          <img src="./assets/img/Our Games/Logo 16.png" />
+        </div>
+      </section>
+      <section id="contact">
+        <h2>Contact</h2>
+        <div id="contact-flex">
+          <a href="#"><i class="fa-solid fa-envelope"></i></a>
+          <a href="#"><i class="fa-brands fa-app-store-ios"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+        </div>
+      </section>
+      <footer>
+        <h2>Connect With Us</h2>
+        <img id="arrow" src="./assets/img/Mobile/Arrow.png" />
+        <a href="#"><i class="fa-solid fa-map-location-dot"></i></a>
+        <p>
+          © <span class="number">2022</span> Phoca Games, All Rights Reserved.
+        </p>
+      </footer>
+    </main>
+    <main id="desktop">
+      <nav>
+        <a href="/"
+          ><img id="logo" src="./assets/img/Desktop/Logo.png" alt="Logo"
+        /></a>
+        <a href="/"><h1>phoca.io</h1></a>
+        <ul>
+          <li><a id="homeButton" href="#">Home</a></li>
+          <li><a id="aboutUsButton" href="#about-us">About Us</a></li>
+          <li><a id="gamesButton" href="#games">Games</a></li>
+          <li><a id="contactButton" href="#contact">Contact</a></li>
+          <li><a href="#" id="nav-highlight">Share Your Game</a></li>
+        </ul>
+      </nav>
+      <header>
+        <div class="frame">
+          <div id="header-content">
+            <h2>Hypercasual Gaming</h2>
+            <p>
+              We are committed to producing massively scaling global games while
+              building a future-proof ecosystem in the gaming industry.
+            </p>
+            <a id="header-highlight" href="#">Apply Now!</a>
+          </div>
+        </div>
+      </header>
+      <section id="about-us">
+        <div class="dual-content">
+          <div>
+            <h3>About Us</h3>
+            <p>
+              Welcome to Phoca.io!
+              <br />
+              <br />
+              We develop and publish hyper-casual games for anyone who loves to
+              be entertained. We’re global game makers with big ambitions and a
+              collaborative mindset. We work in small teams to inspire
+              creativity and use data for speedy decision-making. Creating video
+              games is supposed to be fun, so we make sure it’s exactly that.
+            </p>
+          </div>
+          <div class="slider" style="height: 0; padding-bottom: 100%">
+            <div>
+              <div class="game-icon">
+                <img src="./assets/img/Our Hits/1 Logo.png" alt="" />
+                <p>Tap On Time <span class="age">4+</span></p>
+                <p>Test your reflexes!</p>
+              </div>
+              <div class="game-image">
+                <img src="./assets/img/Our Hits/1 First.png" alt="" />
+                <img src="./assets/img/Our Hits/1 Second.png" alt="" />
+              </div>
+            </div>
+            <div class="faded right">
+              <div class="game-icon">
+                <img src="./assets/img/Our Hits/2 Logo.png" alt="" />
+                <p>Make Her Jealous <span class="age">12+</span></p>
+                <p>Take risk, enjoy</p>
+              </div>
+              <div class="game-image">
+                <img src="./assets/img/Our Hits/2 First.png" alt="" />
+                <img src="./assets/img/Our Hits/2 Second.png" alt="" />
+              </div>
+            </div>
+            <div class="faded right">
+              <div class="game-icon">
+                <img src="./assets/img/Our Hits/3 Logo.png" alt="" />
+                <p>Word Guess <span class="age">4+</span></p>
+                <p>Word guessing game</p>
+              </div>
+              <div class="game-image">
+                <img src="./assets/img/Our Hits/3 First.png" alt="" />
+                <img src="./assets/img/Our Hits/3 Second.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="games">
+        <h3>Games</h3>
+        <div id="games-grid">
+          <img src="./assets/img/Our Games/Logo 1.png" />
+          <img src="./assets/img/Our Games/Logo 2.png" />
+          <img src="./assets/img/Our Games/Logo 3.png" />
+          <img src="./assets/img/Our Games/Logo 4.png" />
+          <img src="./assets/img/Our Games/Logo 5.png" />
+          <img src="./assets/img/Our Games/Logo 6.png" />
+          <img src="./assets/img/Our Games/Logo 7.png" />
+          <img src="./assets/img/Our Games/Logo 8.png" />
+          <img src="./assets/img/Our Games/Logo 9.png" />
+          <img src="./assets/img/Our Games/Logo 10.png" />
+          <img src="./assets/img/Our Games/Logo 11.png" />
+          <img src="./assets/img/Our Games/Logo 12.png" />
+          <img src="./assets/img/Our Games/Logo 13.png" />
+          <img src="./assets/img/Our Games/Logo 14.png" />
+          <img src="./assets/img/Our Games/Logo 15.png" />
+          <img src="./assets/img/Our Games/Logo 16.png" />
+        </div>
+      </section>
+      <section id="contact">
+        <h3>Contact</h3>
+        <div class="contact">
+          <a href="#">
+            <i class="fa-solid fa-envelope"></i>
+            <span>example@phoca.io</span>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-app-store"></i>
+            <span>phoca.io</span>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-linkedin"></i>
+            <span>/phoca.io</span>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-instagram"></i>
+            <span>@phoca.io</span>
+          </a>
+        </div>
+      </section>
 
-    <script src="./assets/js/script.js?version=0.92"></script>
+      <footer>
+        <div id="footer">
+          <img
+            id="footer-logo"
+            src="./assets/img/Desktop/Logo II.png"
+            alt="Logo"
+          />
+          <div class="footer-contact">
+            <a href="#">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-app-store"></i>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about-us">About Us</a></li>
+            <li><a href="#games">Games</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#" id="footer-highlight">Share Your Game</a></li>
+          </ul>
+        </div>
+        <p>© 2022 Phoca Games, All Rights Reserved.</p>
+      </footer>
+    </main>
+    <script
+      src="https://kit.fontawesome.com/7dd71db1c1.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>

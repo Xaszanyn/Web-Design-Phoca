@@ -1,43 +1,159 @@
-/* Variables //////////////////////////////////////// */
+/* Created by Ekin Aslan ekinaslan.js@gmail.com */
 
-var navigation = document.querySelector("nav");
-var logo = navigation.querySelector("#logo");
-var menu = navigation.querySelector("#menu");
-var categories = navigation.querySelector("ul");
-var categoryButtons = navigation.querySelectorAll("ul > *");
+// ================================================== VARIABLES ================================================== //
 
-var slides = document.querySelectorAll("section .dual-content .slider > *");
+const mobile = document.querySelector("#mobile");
+const fish = document.querySelector("#mobile #fish");
+const seaTurtle = document.querySelector("#mobile #sea-turtle");
+const octopus = document.querySelector("#mobile #octopus");
+const navigation = document.querySelector("#mobile nav");
+const bar = document.querySelector("#mobile #bar");
+const menu = document.querySelector("#mobile #menu");
 
-/* Initials //////////////////////////////////////// */
+const desktop = document.querySelector("#desktop");
+const desktopNavigation = document.querySelector("#desktop nav");
+const logo = desktopNavigation.querySelector("#desktop #logo");
+const slides = document.querySelectorAll(
+  "#desktop section .dual-content .slider > *"
+);
+const header = document.querySelector("#desktop header");
+var desktopBackground = 0;
 
-setInterval(slide, 5000);
+const colorInterpolation = [
+  [45, 102, 115, 0], // var(--background-primary)
+  [21, 87, 95, 15],
+  [12, 82, 129, 40],
+  [108, 40, 161, 80],
+  [19, 21, 71, 100],
+];
 
-/* Events //////////////////////////////////////// */
+var ratio = 0;
+var unit = 0;
 
-window.addEventListener("scroll", scrollCheck);
+var isDesktop = window.innerWidth > window.innerHeight;
 
-menu.addEventListener("click", toggleMenu);
-categoryButtons.forEach(function (item) {
-  item.addEventListener("click", toggleMenu);
+// ================================================== EVENTS ================================================== //
+
+window.addEventListener("resize", makeResponsive);
+
+window.addEventListener("scroll", function () {
+  if (isDesktop) {
+    scrollCheck();
+    return;
+  }
+
+  transparentNavigation(window.scrollY);
+
+  let backgroundImageHeight = window.innerWidth * 2;
+
+  let scrollRatio = Math.ceil(
+    (Math.max(0, window.scrollY - backgroundImageHeight) /
+      (document.body.offsetHeight -
+        window.innerHeight -
+        backgroundImageHeight)) *
+      100
+  );
+
+  let scrollUnit = Math.ceil((window.scrollY / window.innerWidth) * 20);
+
+  if (ratio != scrollRatio) {
+    ratio = scrollRatio;
+    backgroundInterpolation();
+  }
+
+  if (unit != scrollUnit) {
+    unit = scrollUnit;
+    objectPerspective(unit);
+  }
 });
 
-/* Functions //////////////////////////////////////// */
+bar.addEventListener("click", function (event) {
+  event.preventDefault();
 
-function toggleMenu() {
-  categories.classList.toggle("hidden");
+  menu.classList.add("displayed");
+});
+
+menu.addEventListener("mousedown", function (event) {
+  menu.classList.remove("displayed");
+});
+
+// ================================================== FUNCTIONS ================================================== //
+
+function makeResponsive() {
+  isDesktop = window.innerWidth > window.innerHeight;
+  if (isDesktop) {
+    mobile.style.display = "none";
+    desktop.style.display = "block";
+  } else {
+    mobile.style.display = "block";
+    desktop.style.display = "none";
+  }
+}
+
+function backgroundInterpolation() {
+  if (ratio < 0) return;
+
+  for (let i = 1; i < colorInterpolation.length; i++) {
+    let end = colorInterpolation[i];
+    if (ratio <= end[3]) {
+      let start = colorInterpolation[i - 1];
+
+      let interpolation = (ratio - start[3]) / (end[3] - start[3]);
+
+      let red = start[0] + (end[0] - start[0]) * interpolation;
+      let green = start[1] + (end[1] - start[1]) * interpolation;
+      let blue = start[2] + (end[2] - start[2]) * interpolation;
+
+      mobile.style = `background-color: rgb(${red}, ${green}, ${blue})`;
+
+      break;
+    }
+  }
+}
+
+function objectPerspective(unit) {
+  fish.style.transform = `translateY(-${unit * 5}px)`;
+
+  seaTurtle.style.transform =
+    unit * 3 - 210 > 0
+      ? `translateY(-${unit * 3 - 210}px)`
+      : `translateY(${(unit * 3 - 210) * -1}px)`;
+
+  octopus.style.transform = `scale(1.35) translateY(${unit * 2 - 175}px)`;
+}
+
+function transparentNavigation(y) {
+  if (y == 0) navigation.classList.remove("opened");
+  else navigation.classList.add("opened");
+}
+
+function displayGameImages() {
+  document.querySelectorAll(".game-image").forEach((gameImage) => {
+    setInterval(() => {
+      if (gameImage.children[1].classList.contains("hidden")) {
+        gameImage.children[1].classList.remove("hidden");
+      } else gameImage.children[1].classList.add("hidden");
+    }, 3000);
+  });
 }
 
 function scrollCheck() {
   if (window.scrollY == 0) {
-    navigation.classList.remove("smallNav");
+    desktopNavigation.classList.remove("smallNav");
     logo.classList.remove("smallLogo");
   } else {
-    navigation.classList.add("smallNav");
+    desktopNavigation.classList.add("smallNav");
     logo.classList.add("smallLogo");
   }
 }
 
-function slide() {
+// ================================================== INITIALIZE ================================================== //
+
+displayGameImages();
+
+makeResponsive();
+
+setInterval(function () {
   for (let i = 0; i < slides.length; i++) {
     let item = slides[i];
 
@@ -61,4 +177,9 @@ function slide() {
       break;
     }
   }
-}
+}, 6000);
+
+header.classList.add("bottom");
+setInterval(function () {
+  header.classList.toggle("bottom");
+}, 45000);

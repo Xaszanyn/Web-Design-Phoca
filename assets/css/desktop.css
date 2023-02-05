@@ -1,0 +1,362 @@
+/* Created by Ekin Aslan ekinaslan.js@gmail.com */
+
+/* ================================================== Main ================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600&family=Open+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap");
+
+@font-face {
+  font-family: Opificio;
+  src: url("../ttf/Opificio.ttf");
+}
+
+#desktop {
+  font-size: 0.755vw;
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--white);
+  color: var(--black);
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+/* ================================================== Navigation ================================================== */
+
+#desktop nav {
+  width: 100%;
+  height: 8rem;
+  position: fixed;
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  padding: 0 10rem;
+  border-bottom: 0 solid var(--desktop-secondary);
+  transition: height var(--fast), border-bottom-width var(--fast),
+    padding var(--fast);
+  z-index: 10;
+}
+
+#desktop nav.smallNav {
+  height: 5rem;
+  border-bottom-width: 0.25rem;
+}
+
+#desktop nav #logo {
+  width: 8rem;
+  height: 8rem;
+  object-fit: cover;
+  margin-right: 1.5rem;
+  transition: width var(--fast), height var(--fast);
+}
+
+#desktop nav #logo.smallLogo {
+  width: 5rem;
+  height: 5rem;
+}
+
+#desktop nav h1 {
+  font-size: 3rem;
+  font-family: Opificio;
+  color: var(--black);
+}
+
+#desktop nav ul {
+  margin-left: auto;
+}
+
+#desktop nav ul,
+#desktop footer ul {
+  display: flex;
+  align-items: center;
+  font-family: "Kanit", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  transition: left var(--fast);
+}
+
+#desktop nav ul a,
+#desktop footer ul a {
+  transition: color var(--fast), font-size var(--fast),
+    background-color var(--fast);
+}
+
+#desktop nav ul a:hover,
+#desktop footer ul a:hover {
+  font-size: 2.4rem;
+  color: var(--desktop-primary);
+}
+
+#desktop nav #nav-highlight,
+#desktop footer #footer-highlight {
+  background-color: var(--desktop-primary);
+  color: var(--white);
+  padding: 0.25rem 1rem;
+  border-radius: 1rem;
+}
+
+#desktop nav #nav-highlight:hover,
+#desktop footer #footer-highlight:hover {
+  color: var(--desktop-primary);
+  background-color: var(--desktop-secondary);
+  font-size: 2.1rem;
+}
+
+#desktop nav ul li:not(:last-of-type),
+#desktop footer ul li:not(:last-of-type) {
+  margin-right: 1.5rem;
+}
+
+/* ================================================== Header ================================================== */
+
+/*
+#desktop header {
+  width: 100%;
+  height: 100vh;
+  background-image: var(--desktop-background-image);
+  background-position: 87.5% 0%;
+  background-size: cover;
+  background-attachment: fixed;
+}
+*/
+
+#desktop header {
+  width: 100%;
+  height: 100vh;
+  background-image: var(--desktop-background-image);
+  background-size: cover;
+  background-position: 0 0;
+  transition: background-position 45s ease-in-out;
+}
+
+#desktop header.bottom {
+  background-position: 0 90%;
+}
+
+#desktop header .frame {
+  width: 100%;
+  height: 100%;
+  padding: 20rem 10rem 0 10rem;
+  display: flex;
+  align-items: flex-start;
+  background-color: var(--fade);
+}
+
+#desktop header #header-content {
+  color: var(--white);
+  margin-top: 5rem;
+}
+
+#desktop header h2 {
+  font-size: 4rem;
+  font-weight: 500;
+  margin-bottom: 5rem;
+}
+
+#desktop header p {
+  font-size: 2rem;
+  width: 50%;
+  margin-bottom: 2.5rem;
+}
+
+#desktop header #header-highlight {
+  font-size: 2rem;
+  background-color: var(--white);
+  color: var(--desktop-primary);
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+  padding: 0.25rem 1rem;
+  border-radius: 1rem;
+  transition: color var(--fast), background-color var(--fast),
+    font-size var(--fast);
+}
+
+#desktop header #header-highlight:hover {
+  color: var(--desktop-secondary);
+  background-color: var(--desktop-primary);
+  font-size: 2.1rem;
+}
+
+/* ================================================== Section ================================================== */
+
+#desktop section {
+  font-size: 2rem;
+  padding: 15rem 10rem 0;
+}
+
+#desktop section > *:not(:last-of-type) {
+  margin-bottom: 7.5rem;
+}
+
+#desktop section:last-of-type {
+  padding-bottom: 15rem;
+}
+
+#desktop section .dual-content {
+  display: grid;
+  grid-template-columns: calc(50% - 5rem) calc(50% - 5rem);
+  column-gap: 10rem;
+}
+
+#desktop section h3 {
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 3rem;
+}
+
+#desktop section .dual-content h3 {
+  text-align: left;
+}
+
+#desktop section .contact {
+  display: flex;
+  justify-content: center;
+  height: 25rem;
+}
+
+#desktop section .contact > a {
+  margin: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--faded);
+  transition: color var(--fast);
+}
+
+#desktop section .contact > a:hover {
+  color: var(--desktop-primary);
+}
+
+#desktop section .contact i {
+  font-size: 10rem;
+  margin-bottom: 1rem;
+  transition: font-size var(--fast);
+}
+
+#desktop section .contact > a:hover i {
+  font-size: 11rem;
+}
+
+#desktop section .contact span {
+  font-family: "Kanit", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  transition: font-size var(--fast);
+}
+
+#desktop section .contact > a:hover span {
+  font-size: 1.65rem;
+}
+
+/* ================================================== About Us & Slider ================================================== */
+
+#desktop .slider {
+  position: relative;
+}
+
+#desktop .slider > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity var(--slow), transform var(--slow);
+}
+
+#desktop .slider .faded {
+  opacity: 0;
+}
+
+#desktop .slider .left {
+  transform: translateX(-100%);
+}
+
+#desktop .slider .right {
+  transform: translateX(100%);
+}
+
+#desktop .slider > * {
+  display: flex;
+  align-items: center;
+}
+
+#desktop .game-icon img,
+#desktop .game-image img:first-of-type {
+  filter: drop-shadow(0 0 1rem var(--faded));
+}
+
+#desktop .game-icon {
+  margin-top: -5rem;
+}
+
+#desktop .game-icon p:first-of-type {
+  font-family: Opificio;
+  text-transform: uppercase;
+
+  margin-bottom: 1vw;
+}
+
+#desktop .game-icon p:last-of-type {
+  text-transform: uppercase;
+  font-family: Opificio;
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+/* ================================================== Games ================================================== */
+
+#desktop #games {
+  padding-left: 20rem;
+  padding-right: 20rem;
+}
+
+#desktop #games #games-grid {
+  display: grid;
+  column-gap: 0;
+  row-gap: 0;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+#desktop #games #games-grid img {
+  filter: drop-shadow(0 0 1rem var(--faded));
+}
+
+/* ================================================== Footer ================================================== */
+
+#desktop footer {
+  padding: 5rem 10rem;
+  background-color: var(--black);
+  color: var(--white);
+  font-size: 1.2rem;
+}
+
+#desktop footer #footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#desktop footer #footer-logo {
+  width: 15rem;
+  height: 15rem;
+  object-fit: cover;
+  transition: width var(--fast), height var(--fast);
+}
+
+#desktop footer .footer-contact {
+  display: flex;
+  align-items: center;
+  font-size: 2.5rem;
+}
+
+#desktop footer .footer-contact a {
+  transition: color var(--fast), font-size var(--fast);
+}
+
+#desktop footer .footer-contact a:not(:last-of-type) {
+  margin-right: 1.5rem;
+}
+
+#desktop footer .footer-contact a:hover {
+  font-size: 3rem;
+  color: var(--desktop-primary);
+}
+
+#desktop footer p {
+  text-align: center;
+}
