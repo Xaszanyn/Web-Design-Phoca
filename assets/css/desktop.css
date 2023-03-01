@@ -29,8 +29,7 @@
   align-items: center;
   padding: 0 10rem;
   border-bottom: 0 solid var(--desktop-secondary);
-  transition: height var(--fast), border-bottom-width var(--fast),
-    padding var(--fast);
+  transition: height var(--fast), border-bottom-width var(--fast), padding var(--fast);
   z-index: 10;
 }
 
@@ -45,6 +44,7 @@
   object-fit: cover;
   margin-right: 1.5rem;
   transition: width var(--fast), height var(--fast);
+  filter: var(--primary);
 }
 
 #desktop nav #logo.smallLogo {
@@ -74,8 +74,7 @@
 
 #desktop nav ul a,
 #desktop footer ul a {
-  transition: color var(--fast), font-size var(--fast),
-    background-color var(--fast);
+  transition: color var(--fast), font-size var(--fast), background-color var(--fast);
 }
 
 #desktop nav ul a:hover,
@@ -164,8 +163,7 @@
   font-weight: 600;
   padding: 0.25rem 1rem;
   border-radius: 1rem;
-  transition: color var(--fast), background-color var(--fast),
-    font-size var(--fast);
+  transition: color var(--fast), background-color var(--fast), font-size var(--fast);
 }
 
 #desktop header #header-highlight:hover {
@@ -287,8 +285,10 @@
 #desktop .game-icon p:first-of-type {
   font-family: Opificio;
   text-transform: uppercase;
+  text-align: center;
 
-  margin-bottom: 1vw;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
 }
 
 #desktop .game-icon p:last-of-type {
@@ -307,13 +307,24 @@
 
 #desktop #games #games-grid {
   display: grid;
-  column-gap: 0;
-  row-gap: 0;
+  width: calc(100% - 7.5rem);
+  column-gap: 2.5rem;
+  row-gap: 2.5rem;
   grid-template-columns: 25% 25% 25% 25%;
 }
 
+#desktop #games #games-grid div {
+  transform: scale(0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6rem;
+  overflow: hidden;
+  box-shadow: 0 0 1rem var(--faded);
+}
+
 #desktop #games #games-grid img {
-  filter: drop-shadow(0 0 1rem var(--faded));
+  transform: scale(1.05);
 }
 
 /* ================================================== Footer ================================================== */
@@ -359,4 +370,18 @@
 
 #desktop footer p {
   text-align: center;
+}
+
+#desktop footer .footer-navigation {
+  display: flex;
+  flex-direction: column;
+}
+#desktop footer .footer-navigation ul {
+  margin-bottom: 2rem;
+}
+
+/* ================================================== Extra ================================================== */
+
+#desktop .fit {
+  transform: scale(1.45) !important;
 }

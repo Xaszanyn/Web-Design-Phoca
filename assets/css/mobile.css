@@ -36,8 +36,7 @@
   width: 100vw;
   background-color: var(--secondary);
   border-bottom: 0 solid var(--white);
-  transition: background-color var(--fast), height var(--fast),
-    border-bottom var(--fast);
+  transition: background-color var(--fast), height var(--fast), border-bottom var(--fast);
 }
 
 #mobile nav #navigation {
@@ -145,7 +144,7 @@
 
 #mobile .game-icon img {
   margin-top: -5vw;
-  scale: 1.1;
+  scale: 0.9;
   margin-bottom: 2.5vw;
 }
 
@@ -184,14 +183,21 @@
 }
 
 #mobile #games-grid {
+  padding-left: 2.5vw;
+  padding-right: 2.5vw;
+  width: 90vw;
   display: grid;
-  column-gap: 0;
-  row-gap: 0;
+  column-gap: 5vw;
+  row-gap: 5vw;
   grid-template-columns: 50% 50%;
 }
 
-#mobile #games-grid img {
-  transform: scale(1.1);
+#mobile #games-grid div {
+  border-radius: 10vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* ================================================== Contact ================================================== */
@@ -264,4 +270,8 @@
 
 #mobile .displayed {
   right: 0 !important;
+}
+
+#mobile .fit {
+  transform: scale(1.45);
 }

@@ -13,9 +13,7 @@ const menu = document.querySelector("#mobile #menu");
 const desktop = document.querySelector("#desktop");
 const desktopNavigation = document.querySelector("#desktop nav");
 const logo = desktopNavigation.querySelector("#desktop #logo");
-const slides = document.querySelectorAll(
-  "#desktop section .dual-content .slider > *"
-);
+const slides = document.querySelectorAll("#desktop section .dual-content .slider > *");
 const header = document.querySelector("#desktop header");
 var desktopBackground = 0;
 
@@ -48,9 +46,7 @@ window.addEventListener("scroll", function () {
 
   let scrollRatio = Math.ceil(
     (Math.max(0, window.scrollY - backgroundImageHeight) /
-      (document.body.offsetHeight -
-        window.innerHeight -
-        backgroundImageHeight)) *
+      (document.body.offsetHeight - window.innerHeight - backgroundImageHeight)) *
       100
   );
 
@@ -112,14 +108,17 @@ function backgroundInterpolation() {
 }
 
 function objectPerspective(unit) {
-  fish.style.transform = `translateY(-${unit * 5}px)`;
+  fish.style.transform = `translateY(-${Math.min(unit * 5, 150)}px)`;
 
   seaTurtle.style.transform =
     unit * 3 - 210 > 0
-      ? `translateY(-${unit * 3 - 210}px)`
-      : `translateY(${(unit * 3 - 210) * -1}px)`;
+      ? `translateY(-${Math.min(unit * 3 - 210, 30)}px)`
+      : `translateY(${Math.min((unit * 3 - 210) * -1, 150)}px)`;
 
-  octopus.style.transform = `scale(1.35) translateY(${unit * 2 - 175}px)`;
+  octopus.style.transform = `scale(1.35) translateY(${Math.min(
+    Math.max(unit * 2 - 175, -30),
+    120
+  )}px)`;
 }
 
 function transparentNavigation(y) {
