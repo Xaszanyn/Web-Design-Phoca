@@ -17,6 +17,13 @@ const slides = document.querySelectorAll("#desktop section .dual-content .slider
 const header = document.querySelector("#desktop header");
 var desktopBackground = 0;
 
+const termsOfUse = document.querySelectorAll(".terms-of-use");
+const privacyPolicy = document.querySelectorAll(".privacy-policy");
+const partnerPolicies = document.querySelectorAll(".partner-policies");
+const termsAndPolicies = document.querySelector("#terms-and-policies");
+const termsAndPoliciesParts = document.querySelectorAll("#terms-and-policies div");
+const termsAndPoliciesClose = document.querySelector("#terms-and-policies-close");
+
 const colorInterpolation = [
   [45, 102, 115, 0], // var(--background-primary)
   [21, 87, 95, 15],
@@ -73,6 +80,40 @@ menu.addEventListener("mousedown", function (event) {
   menu.classList.remove("displayed");
 });
 
+termsOfUse.forEach((button) =>
+  button.addEventListener("mousedown", function (event) {
+    event.preventDefault();
+
+    termsAndPolicies.classList.add("active");
+    termsAndPoliciesParts[0].classList.add("active");
+  })
+);
+
+privacyPolicy.forEach((button) =>
+  button.addEventListener("mousedown", function (event) {
+    event.preventDefault();
+
+    termsAndPolicies.classList.add("active");
+    termsAndPoliciesParts[1].classList.add("active");
+  })
+);
+
+partnerPolicies.forEach((button) =>
+  button.addEventListener("mousedown", function (event) {
+    event.preventDefault();
+
+    termsAndPolicies.classList.add("active");
+    termsAndPoliciesParts[2].classList.add("active");
+  })
+);
+
+termsAndPoliciesClose.addEventListener("mousedown", function (event) {
+  event.preventDefault();
+
+  termsAndPolicies.classList.remove("active");
+  termsAndPoliciesParts.forEach((part) => part.classList.remove("active"));
+});
+
 // ================================================== FUNCTIONS ================================================== //
 
 function makeResponsive() {
@@ -115,10 +156,7 @@ function objectPerspective(unit) {
       ? `translateY(-${Math.min(unit * 3 - 210, 30)}px)`
       : `translateY(${Math.min((unit * 3 - 210) * -1, 150)}px)`;
 
-  octopus.style.transform = `scale(1.35) translateY(${Math.min(
-    Math.max(unit * 2 - 175, -30),
-    120
-  )}px)`;
+  octopus.style.transform = `scale(1.35) translateY(${Math.min(Math.max(unit * 2 - 175, -30), 120)}px)`;
 }
 
 function transparentNavigation(y) {
